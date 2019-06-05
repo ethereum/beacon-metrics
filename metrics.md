@@ -33,7 +33,7 @@ The metrics should behave under the guidelines set by the [Prometheus documentat
 | current_prev_justified_epoch    | Gauge       | Current previously justified epoch                                | On each epoch                       | 
 | current_epoch_live_validators   | Gauge       | Number of active validators who reported for the current epoch    | On each epoch                       |
 | previous_epoch_live_validators  | Gauge       | Number of active validators who reported for the previous epoch   | On each epoch
-| reorg                           | Counter     | Occurrence of a reorganization of the chain                       | On fork choice                      |
+| reorg_events_total              | Counter     | Occurrence of a reorganization of the chain                       | On fork choice                      |
 | pending_deposits                | Gauge       | Number of pending deposits                                        | Upon processing eth1 events watching the deposit contract |
 | total_deposits                  | Gauge       | Number of total deposits                                          | Upon processing eth1 events watching the deposit contract |
 
