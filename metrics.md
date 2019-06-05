@@ -24,18 +24,18 @@ The metrics should behave under the guidelines set by the [Prometheus documentat
 
 ### Metrics
 
-| Name                            | Metric type | Usage                                                             | Sample collection event             |
+| Name | Metric type | Usage | Sample collection event |
 |---------------------------------|-------------|-------------------------------------------------------------------|-------------------------------------|
-| beacon_chain_peers              | Gauge       | Tracks number of peers                                            | When a new peer is added or dropped |
-| current_slot                    | Gauge       | Latest slot recorded by the beacon chain                          | Each time slot changes              |
-| current_justified_epoch         | Gauge       | Current justified epoch                                           | On each epoch                       |
-| current_finalized_epoch         | Gauge       | Current finalized epoch                                           | On each epoch                       |
-| current_prev_justified_epoch    | Gauge       | Current previously justified epoch                                | On each epoch                       | 
-| current_epoch_live_validators   | Gauge       | Number of active validators who reported for the current epoch    | On each epoch                       |
-| previous_epoch_live_validators  | Gauge       | Number of active validators who reported for the previous epoch   | On each epoch
-| reorg                           | Counter     | Occurrence of a reorganization of the chain                       | On fork choice                      |
-| pending_deposits                | Gauge       | Number of pending deposits                                        | Upon processing eth1 events watching the deposit contract |
-| total_deposits                  | Gauge       | Number of total deposits                                          | Upon processing eth1 events watching the deposit contract |
+| beaconchain_peers              | Gauge       | Tracks number of peers                                            | When a new peer is added or dropped |
+| beaconchain_current_slot | Gauge | Latest slot recorded by the beacon chain | Each time slot changes |
+| beaconchain_current_justified_epoch         | Gauge       | Current justified epoch                                           | On each epoch                       |
+| beaconchain_current_finalized_epoch         | Gauge       | Current finalized epoch                                           | On each epoch                       |
+| beaconchain_current_prev_justified_epoch    | Gauge       | Current previously justified epoch                                | On each epoch                       | 
+| beaconchain_current_epoch_live_validators   | Gauge       | Number of active validators who reported for the current epoch    | On each epoch                       |
+| beaconchain_previous_epoch_live_validators  | Gauge       | Number of active validators who reported for the previous epoch   | On each epoch
+| beaconchain_reorg                           | Counter     | Occurrence of a reorganization of the chain                       | On fork choice                      |
+| beaconchain_pending_deposits                | Gauge       | Number of pending deposits                                        | Upon processing eth1 events watching the deposit contract |
+| beaconchain_total_deposits                  | Gauge       | Number of total deposits                                          | Upon processing eth1 events watching the deposit contract |
 
 ### Labels
 
