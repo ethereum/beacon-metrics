@@ -36,6 +36,8 @@ The metrics should behave under the guidelines set by the [Prometheus documentat
 | beaconchain_reorg_events_total              | Counter     | Occurrence of a reorganization of the chain                       | On fork choice                      |
 | beaconchain_pending_deposits                | Gauge       | Number of pending deposits                                        | Upon processing eth1 events watching the deposit contract |
 | beaconchain_total_deposits                  | Gauge       | Number of total deposits                                          | Upon processing eth1 events watching the deposit contract |
+| beaconchain_previous_epoch_stale_blocks     | Gauge       | Number of blocks not included into canonical chain in the previous epoch                                                                                                                  | On each epoch                       |
+| beaconchain_propagated_attestations         | Gauge       | Number of distinct attestations to a slot received from the wire                                                                                                                 | When attestation inclusion delay passed     |
 
 
 ### Labels
