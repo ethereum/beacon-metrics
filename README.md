@@ -1,3 +1,5 @@
+*This repository has moved! Follow the latest at https://github.com/ethereum/eth2.0-metrics*
+
 # ETH 2.0 metrics
 
 Discussion of ETH 2.0 metrics for Prometheus.
