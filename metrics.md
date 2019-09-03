@@ -28,17 +28,17 @@ The metrics SHOULD behave under the guidelines set by the [Prometheus documentat
 The following are the minimal metrics agreed to be conformed upon prior to initial client interop efforts.
 
 | Name | Metric type | Usage | Sample collection event |
-|-----------------------------------------------|-------------|------------------------------------------------------------------------|----------------------|
-| `beaconchain_peers`                           | Gauge       | Tracks number of peers                                                 | On peer add/drop     |
-| `beaconchain_slot`                            | Gauge       | Latest slot of the beacon chain state                                  | On slot              |
-| `beaconchain_head_slot`                       | Gauge       | Slot of the head block of the beacon chain                             | On fork choice       |
-| `beaconchain_head_root`                       | Gauge       | Root of the head block of the beacon chain                             | On fork choice       |
-| `beaconchain_finalized_epoch`                 | Gauge       | Current finalized checkpoint epoch                                     | On epoch transition  |
-| `beaconchain_finalized_root`                  | Gauge       | Current finalized checkpoint root                                      | On epoch transition  |
-| `beaconchain_current_justified_epoch`         | Gauge       | Current justified checkpoint epoch                                     | On epoch transition  |
-| `beaconchain_current_justified_root`          | Gauge       | Current justified checkpoint root                                      | On epoch transition  |
-| `beaconchain_previous_justified_epoch`        | Gauge       | Current previously justified checkpoint epoch                          | On epoch transition  |
-| `beaconchain_previous_justified_root`         | Gauge       | Current previously justified checkpoint root                           | On epoch transition  |
+|-----------------------------------------------|-------------|-------------------------------------------------------------|----------------------|
+| `beaconchain_peers`                           | Gauge       | Tracks number of peers                                      | On peer add/drop     |
+| `beaconchain_slot`                            | Gauge       | Latest slot of the beacon chain state                       | On slot              |
+| `beaconchain_head_slot`                       | Gauge       | Slot of the head block of the beacon chain                  | On fork choice       |
+| `beaconchain_head_root`                       | Gauge       | Root of the head block of the beacon chain                  | On fork choice       |
+| `beaconchain_finalized_epoch`                 | Gauge       | Current finalized epoch                                     | On epoch transition  |
+| `beaconchain_finalized_root`                  | Gauge       | Current finalized root                                      | On epoch transition  |
+| `beaconchain_current_justified_epoch`         | Gauge       | Current justified epoch                                     | On epoch transition  |
+| `beaconchain_current_justified_root`          | Gauge       | Current justified root                                      | On epoch transition  |
+| `beaconchain_previous_justified_epoch`        | Gauge       | Current previously justified epoch                          | On epoch transition  |
+| `beaconchain_previous_justified_root`         | Gauge       | Current previously justified root                           | On epoch transition  |
 
 ### Additional Metrics
 
