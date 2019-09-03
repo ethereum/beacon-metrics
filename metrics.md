@@ -10,7 +10,7 @@ This specification is informative, and implementations are not required to imple
 
 Beacon chain clients SHOULD use Prometheus for metrics collection conforming to the following:
 
-* Beacon chain clients SHOULD configure [Prometheus](https://prometheus.io/) so that it exposes metrics collection over a HTTP port.
+* Beacon chain clients SHOULD configure [Prometheus](https://prometheus.io/) so that it exposes metrics collection over an HTTP port.
 * Beacon chain clients MAY elect to secure the HTTP endpoint by restricting network access and applying Prometheus security settings, according to Prometheus [best practices](https://prometheus.io/docs/operating/security/).
 * Beacon chain clients SHOULD allow configuration flags to set the network interface and the port the Prometheus collection endpoint will be served from.
 * By default, the Prometheus collection endpoint SHOULD be served from 0.0.0.0:8008.
@@ -46,15 +46,15 @@ The following are proposed metrics to be added to clients. This list is _not_ st
 
 | Name | Metric type | Usage | Sample collection event |
 |-----------------------------------------------|-------------|--------------------------------------------------------------------------------------|---------------------|
-| `beaconchain_current_validators`              | Gauge       | Number of `status="pending|active|exited|withdrawable"` validators in current epoch  | On epoch transition |
-| `beaconchain_previous_validators`             | Gauge       | Number of `status="pending|active|exited|withdrawable"` validators in previous epoch | On epoch transition |
-| `beaconchain_current_live_validators`         | Gauge       | Number of active validators that successfully included attestation on chain for current epoch  | On block  |
-| `beaconchain_previous_live_validators`        | Gauge       | Number of active validators that successfully included attestation on chain for previous epoch | On block  |
-| `beaconchain_pending_deposits`                | Gauge       | Number of pending deposits (`state.eth1_data.deposit_count - state.eth1_deposit_index`)        | On block  |
-| `beaconchain_processed_deposits_total`        | Gauge       | Number of total deposits included on chain                                                     | On block  |
-| `beaconchain_pending_exits`                   | Gauge       | Number of pending voluntary exits in local operation pool                                      | On slot   |
-| `beaconchain_previous_epoch_orphaned_blocks`  | Gauge       | Number of blocks orphaned in the previous epoch                                      | On epoch transition |
-| `beaconchain_reorgs_total`                    | Counter     | Total occurrences of reorganizations of the chain                                         | On fork choice |
+| `beaconchain_current_validators`              | Gauge       | Number of `status="pending\|active\|exited\|withdrawable"` validators in current epoch  | On epoch transition |
+| `beaconchain_previous_validators`             | Gauge       | Number of `status="pending\|active\|exited\|withdrawable"` validators in previous epoch | On epoch transition |
+| `beaconchain_current_live_validators`         | Gauge       | Number of active validators that successfully included attestation on chain for current epoch     | On block  |
+| `beaconchain_previous_live_validators`        | Gauge       | Number of active validators that successfully included attestation on chain for previous epoch    | On block  |
+| `beaconchain_pending_deposits`                | Gauge       | Number of pending deposits (`state.eth1_data.deposit_count - state.eth1_deposit_index`)           | On block  |
+| `beaconchain_processed_deposits_total`        | Gauge       | Number of total deposits included on chain                                                        | On block  |
+| `beaconchain_pending_exits`                   | Gauge       | Number of pending voluntary exits in local operation pool                                         | On slot   |
+| `beaconchain_previous_epoch_orphaned_blocks`  | Gauge       | Number of blocks orphaned in the previous epoch                                         | On epoch transition |
+| `beaconchain_reorgs_total`                    | Counter     | Total occurrences of reorganizations of the chain                                            | On fork choice |
 
 ### Labels
 
