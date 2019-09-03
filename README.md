@@ -1,6 +1,6 @@
 # ETH 2.0 metrics
 
-Discussion of ETH 2.0 metrics for Prometheus.
+Discussion of [ETH 2.0 metrics](metrics.md) for Prometheus.
 
 ## License
 
