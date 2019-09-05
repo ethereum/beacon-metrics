@@ -23,14 +23,15 @@ The following are the minimal metrics agreed to be conformed upon prior to initi
 | `libp2p_peers`                           | Gauge       | Tracks number of libp2p peers                               | On peer add/drop     |
 | `beacon_slot`                            | Gauge       | Latest slot of the beacon chain state                       | On slot              |
 | `beacon_head_slot`                       | Gauge       | Slot of the head block of the beacon chain                  | On fork choice       |
-| `beacon_head_root`                       | Gauge       | Root of the head block of the beacon chain                  | On fork choice       |
+| `beacon_head_root`                       | Gauge       | Root of the head block of the beacon chain*                 | On fork choice       |
 | `beacon_finalized_epoch`                 | Gauge       | Current finalized epoch                                     | On epoch transition  |
-| `beacon_finalized_root`                  | Gauge       | Current finalized root                                      | On epoch transition  |
+| `beacon_finalized_root`                  | Gauge       | Current finalized root*                                     | On epoch transition  |
 | `beacon_current_justified_epoch`         | Gauge       | Current justified epoch                                     | On epoch transition  |
-| `beacon_current_justified_root`          | Gauge       | Current justified root                                      | On epoch transition  |
+| `beacon_current_justified_root`          | Gauge       | Current justified root*                                     | On epoch transition  |
 | `beacon_previous_justified_epoch`        | Gauge       | Current previously justified epoch                          | On epoch transition  |
-| `beacon_previous_justified_root`         | Gauge       | Current previously justified root                           | On epoch transition  |
+| `beacon_previous_justified_root`         | Gauge       | Current previously justified root*                          | On epoch transition  |
 
+\* All `*_root` values are converted to signed 64-bit integers utilizing the last 8 bytes interpreted as little-endian (`int.from_bytes(root[24:32], byteorder='little', signed=True)`).
 ### Additional Metrics
 
 The following are proposed metrics to be added to clients. This list is _not_ stable and is subject to drastic changes, deletions, and additions.
