@@ -33,7 +33,7 @@ The following are the minimal metrics agreed to be conformed by the various clie
 ### Additional Metrics
 
 The following are proposed metrics to be added to clients. This list is _not_ stable and is subject to drastic changes, deletions, and additions. The additional metric list is being
-discussed, we are yet to reach consensus. 
+discussed, we are yet to reach consensus. Ideally we would also discuss which of these values need to be counters, guages or histograms. 
 
 | Name | Metric type | Usage | Sample collection event |
 |----------------------------------------------|-------------|--------------------------------------------------------------------------------------|---------------------|
