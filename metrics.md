@@ -20,13 +20,13 @@ The following are the minimal metrics agreed to be conformed by the various clie
 
 | Name | Metric type | Usage | Sample collection event |
 |--------------------------------------------|-------------|-------------------------------------------------------------|----------------------|
-| `libp2p_peer_connected_total`              | Gauge       | Tracks the total number of libp2p peers                     | On peer add/drop     |
-| `beacon_head_state_slot`                   | Gauge       | Slot of the head block of the beacon chain                  | On fork choice       |
+| `libp2p_peers               `              | Gauge       | Tracks the total number of libp2p peers                     | On peer add/drop     |
+| `beacon_head_slot`                         | Gauge       | Latest slot of the beacon chain                             | On fork choice       |
 | `beacon_finalized_epoch`                   | Gauge       | Current finalized epoch                                     | On epoch transition  |
 | `beacon_current_justified_epoch`           | Gauge       | Current justified epoch                                     | On epoch transition  |
 | `beacon_previous_justified_epoch`          | Gauge       | Current previously justified epoch                          | On epoch transition  |
-| `beacon_head_state_active_validators_total`| Gauge       | Current total active validators                             | On epoch transition  |
-| `beacon_fork_choice_reorg_total`           | Counter     | Total number of chain reorganizations                       | On fork choice       |
+| `beacon_current_active_validators`         | Gauge       | Current total active validators                             | On epoch transition  |
+| `beacon_reorgs_total`                      | Counter     | Total number of chain reorganizations                       | On fork choice       |
 | `beacon_processed_deposits_total`          | Gauge       | Total number of deposits processed                          | On epoch transition  |
 
 \* All `*_root` values are converted to signed 64-bit integers utilizing the last 8 bytes interpreted as little-endian (`int.from_bytes(root[24:32], byteorder='little', signed=True)`).
