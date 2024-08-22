@@ -46,7 +46,7 @@ The following metrics are proposed to be added to clients for PeerDAS monitoring
 | `beacon_data_column_sidecar_inclusion_proof_verification` | Histogram | Time taken to verify data_column sidecar inclusion proof                          |  On data column sidecar inclusion proof verification  |
 | `beacon_kzg_verification_data_column_single`              | Histogram | Runtime of single data column kzg verification                                 | On single data column kzg verification  |
 | `beacon_kzg_verification_data_column_batch`               | Histogram | Runtime of batched data column kzg verification                                 | On batched data column kzg verification |
-| `beacon_custody_columns_count_total`                              | Gauge     | Total count of columns in custody                                      | On collecting metrics from the data availability checker |
+| `beacon_custody_columns_count_total`                              | Gauge     | Total count of columns in custody                                      | On custody collecting and verification(?) |
 
 
 ### Additional Metrics
