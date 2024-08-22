@@ -30,6 +30,25 @@ The following are the minimal metrics agreed to be conformed by the various clie
 | `beacon_processed_deposits_total`          | Gauge       | Total number of deposits processed                          | On epoch transition  |
 
 \* All `*_root` values are converted to signed 64-bit integers utilizing the last 8 bytes interpreted as little-endian (`int.from_bytes(root[24:32], byteorder='little', signed=True)`).
+
+### PeerDAS Metrics
+
+The following metrics are proposed to be added to clients for PeerDAS monitoring. This list is open for discussion. Each client has the opportunity to contribute to it by suggesting additions or disputing existing metrics.
+
+| Name | Metric type | Usage | Sample collection event |
+|--------------------------------------------|-------------|-------------------------------------------------------------|----------------------|
+| `beacon_data_column_sidecar_processing_requests_total`            | Counter   | Number of data column sidecars submitted for processing                     | On data column sidecar gossip verification     |
+| `beacon_data_column_sidecar_processing_successes_total`           | Counter   | Number of data column sidecars verified for gossip                         | On data column sidecar gossip verification     |
+| `beacon_data_column_sidecar_gossip_verification`          | Histogram | Full runtime of data column sidecars gossip verification                   | On data column sidecar gossip verification     |
+| `beacon_data_availability_reconstructed_columns_total`            | Counter   | Total count of reconstructed columns                                      | On data column kzg verification  |  
+| `beacon_data_availability_reconstruction_time`            | Histogram | Time taken to reconstruct columns                                      | On data column kzg verification  |
+| `beacon_data_column_sidecar_computation`                  | Histogram | Time taken to compute data column sidecar, including cells, proofs and inclusion proof                |  On data column sidecar computation            |
+| `beacon_data_column_sidecar_inclusion_proof_verification` | Histogram | Time taken to verify data_column sidecar inclusion proof                          |  On data column sidecar inclusion proof verification  |
+| `beacon_kzg_verification_data_column_single`              | Histogram | Runtime of single data column kzg verification                                 | On single data column kzg verification  |
+| `beacon_kzg_verification_data_column_batch`               | Histogram | Runtime of batched data column kzg verification                                 | On batched data column kzg verification |
+| `beacon_custody_columns_count_total`                              | Gauge     | Total count of columns in custody                                      | On collecting metrics from the data availability checker |
+
+
 ### Additional Metrics
 
 The following are proposed metrics to be added to clients. This list is _not_ stable and is subject to drastic changes, deletions, and additions. The additional metric list is being
