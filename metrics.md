@@ -50,7 +50,8 @@ The following metrics are proposed to be added to clients for PeerDAS monitoring
 | `beacon_kzg_verification_data_column_batch_seconds`               | Histogram | Runtime of batched data column kzg verification                                 | On batched data column kzg verification |
 | `beacon_custody_columns_count_total`                              | Counter     | Total count of columns in custody within the data availability boundary                                     | On custody collecting and verification |
 
-#### Gossip metrics
+#### Gossipsub metrics
+Gossipsub domain metrics should contain topic `data_column_sidecar_{subnet_id}` as labels.
 
 | Name | Metric type | Usage | Sample collection event |
 |--------------------------------------------|-------------|-------------------------------------------------------------|----------------------|
@@ -63,6 +64,8 @@ The following metrics are proposed to be added to clients for PeerDAS monitoring
 
 
 #### Req/Resp metrics 
+
+Req/Resp domain metrics should contain protocol ID `/eth2/beacon_chain/req/data_column_sidecars_by_root/1/` and `/eth2/beacon_chain/req/data_column_sidecars_by_range/1/` as labels.
 
 | Name | Metric type | Usage | Sample collection event |
 |--------------------------------------------|-------------|-------------------------------------------------------------|----------------------|
