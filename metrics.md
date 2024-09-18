@@ -35,18 +35,45 @@ The following are the minimal metrics agreed to be conformed by the various clie
 
 The following metrics are proposed to be added to clients for PeerDAS monitoring. This list is open for discussion. Each client has the opportunity to contribute to it by suggesting additions or disputing existing metrics.
 
+#### Data column, kzg, custody metrics
+
 | Name | Metric type | Usage | Sample collection event |
 |--------------------------------------------|-------------|-------------------------------------------------------------|----------------------|
 | `beacon_data_column_sidecar_processing_requests_total`            | Counter   | Number of data column sidecars submitted for processing                     | On data column sidecar gossip verification     |
 | `beacon_data_column_sidecar_processing_successes_total`           | Counter   | Number of data column sidecars verified for gossip                         | On data column sidecar gossip verification     |
-| `beacon_data_column_sidecar_gossip_verification`          | Histogram | Full runtime of data column sidecars gossip verification                   | On data column sidecar gossip verification     |
-| `beacon_data_availability_reconstructed_columns_total`            | Counter   | Total count of reconstructed columns                                      | On data column kzg verification  |  
-| `beacon_data_availability_reconstruction_time`            | Histogram | Time taken to reconstruct columns                                      | On data column kzg verification  |
-| `beacon_data_column_sidecar_computation`                  | Histogram | Time taken to compute data column sidecar, including cells, proofs and inclusion proof                |  On data column sidecar computation            |
-| `beacon_data_column_sidecar_inclusion_proof_verification` | Histogram | Time taken to verify data_column sidecar inclusion proof                          |  On data column sidecar inclusion proof verification  |
-| `beacon_kzg_verification_data_column_single`              | Histogram | Runtime of single data column kzg verification                                 | On single data column kzg verification  |
-| `beacon_kzg_verification_data_column_batch`               | Histogram | Runtime of batched data column kzg verification                                 | On batched data column kzg verification |
-| `beacon_custody_columns_count_total`                              | Gauge     | Total count of columns in custody                                      | On custody collecting and verification(?) |
+| `beacon_data_column_sidecar_gossip_verification_seconds`          | Histogram | Full runtime of data column sidecars gossip verification                   | On data column sidecar gossip verification     |
+| `beacon_data_availability_reconstructed_columns_total`            | Counter   | Total count of reconstructed columns                                      | On data column kzg verification  |
+| `beacon_data_availability_reconstruction_time_seconds`            | Histogram | Time taken to reconstruct columns                                      | On data column kzg verification  |
+| `beacon_data_column_sidecar_computation_seconds`                  | Histogram | Time taken to compute data column sidecar, including cells, proofs and inclusion proof                |  On data column sidecar computation            |
+| `beacon_data_column_sidecar_inclusion_proof_verification_seconds` | Histogram | Time taken to verify data_column sidecar inclusion proof                          |  On data column sidecar inclusion proof verification  |
+| `beacon_kzg_verification_data_column_single_seconds`              | Histogram | Runtime of single data column kzg verification                                 | On single data column kzg verification  |
+| `beacon_kzg_verification_data_column_batch_seconds`               | Histogram | Runtime of batched data column kzg verification                                 | On batched data column kzg verification |
+| `beacon_custody_columns_count_total`                              | Counter     | Total count of columns in custody within the data availability boundary                                     | On custody collecting and verification |
+
+#### Gossip metrics
+
+| Name | Metric type | Usage | Sample collection event |
+|--------------------------------------------|-------------|-------------------------------------------------------------|----------------------|
+| `gossipsub_topic_msg_sent_counts_total` | Counter | Number of gossip messages sent to each topic | On sending a message over a topic |
+| `gossipsub_topic_msg_sent_bytes_total` | Counter | Number of bytes sent to each topic | On sending a message over a topic |
+| `gossipsub_topic_msg_recv_counts_unfiltered_total` | Counter | Number of gossip messages received from each topic (including duplicates)  | On receiving a message from a topic including duplicates|
+| `gossipsub_topic_msg_recv_bytes_unfiltered_total` | Counter | Number of bytes received from each topic (including duplicates) |  On receiving a message from a topic including duplicates |
+| `gossipsub_topic_msg_recv_counts_total` | Counter | Number of gossip messages received from each topic (deduplicated)  | On receiving a message from a topic deduplicated |
+| `gossipsub_topic_msg_recv_bytes_total` | Counter | Number of bytes received from each topic (deduplicated) | On receiving a message from a topic deduplicated |
+
+
+#### Req/Resp metrics 
+
+| Name | Metric type | Usage | Sample collection event |
+|--------------------------------------------|-------------|-------------------------------------------------------------|----------------------|
+| `libp2p_rpc_requests_sent_total` | Counter | Number of requests sent | On propagating an RPC request |
+| `libp2p_rpc_requests_bytes_sent_total` | Counter | Number of requests bytes sent | On propagating an RPC request |
+| `libp2p_rpc_requests_received_total` | Counter | Number of requests received |  On receiving an RPC request  |
+| `libp2p_rpc_requests_bytes_received_total` | Counter | Number of requests bytes received | On receiving an RPC request |
+| `libp2p_rpc_responses_sent_total` | Counter | Number of responses sent  | On propagating an RPC response |
+| `libp2p_rpc_responses_bytes_sent_total` | Counter | Number of responses bytes sent  | On propagating an RPC response |
+| `libp2p_rpc_responses_received_total` | Counter | Number of responses received  | On receiving an RPC response |
+| `libp2p_rpc_responses_bytes_received_total` | Counter | Number of responses bytes received | On receiving an RPC response |
 
 
 ### Additional Metrics
