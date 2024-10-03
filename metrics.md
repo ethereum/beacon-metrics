@@ -50,35 +50,6 @@ The following metrics are proposed to be added to clients for PeerDAS monitoring
 | `beacon_kzg_verification_data_column_batch_seconds`               | Histogram | Runtime of batched data column kzg verification                                 | On batched data column kzg verification |
 | `beacon_custody_columns_count_total`                              | Counter     | Total count of columns in custody within the data availability boundary                                     | On custody collecting and verification |
 
-#### Gossipsub metrics
-Gossipsub domain metrics should contain topic `data_column_sidecar_{subnet_id}` as labels.
-
-| Name | Metric type | Usage | Sample collection event |
-|--------------------------------------------|-------------|-------------------------------------------------------------|----------------------|
-| `gossipsub_topic_msg_sent_counts_total` | Counter | Number of gossip messages sent to each topic | On sending a message over a topic |
-| `gossipsub_topic_msg_sent_bytes_total` | Counter | Number of bytes sent to each topic | On sending a message over a topic |
-| `gossipsub_topic_msg_recv_counts_unfiltered_total` | Counter | Number of gossip messages received from each topic (including duplicates)  | On receiving a message from a topic including duplicates|
-| `gossipsub_topic_msg_recv_bytes_unfiltered_total` | Counter | Number of bytes received from each topic (including duplicates) |  On receiving a message from a topic including duplicates |
-| `gossipsub_topic_msg_recv_counts_total` | Counter | Number of gossip messages received from each topic (deduplicated)  | On receiving a message from a topic deduplicated |
-| `gossipsub_topic_msg_recv_bytes_total` | Counter | Number of bytes received from each topic (deduplicated) | On receiving a message from a topic deduplicated |
-
-
-#### Req/Resp metrics 
-
-Req/Resp domain metrics should contain protocol ID `/eth2/beacon_chain/req/data_column_sidecars_by_root/1/` and `/eth2/beacon_chain/req/data_column_sidecars_by_range/1/` as labels.
-
-| Name | Metric type | Usage | Sample collection event |
-|--------------------------------------------|-------------|-------------------------------------------------------------|----------------------|
-| `libp2p_rpc_requests_sent_total` | Counter | Number of requests sent | On propagating an RPC request |
-| `libp2p_rpc_requests_bytes_sent_total` | Counter | Number of requests bytes sent | On propagating an RPC request |
-| `libp2p_rpc_requests_received_total` | Counter | Number of requests received |  On receiving an RPC request  |
-| `libp2p_rpc_requests_bytes_received_total` | Counter | Number of requests bytes received | On receiving an RPC request |
-| `libp2p_rpc_responses_sent_total` | Counter | Number of responses sent  | On propagating an RPC response |
-| `libp2p_rpc_responses_bytes_sent_total` | Counter | Number of responses bytes sent  | On propagating an RPC response |
-| `libp2p_rpc_responses_received_total` | Counter | Number of responses received  | On receiving an RPC response |
-| `libp2p_rpc_responses_bytes_received_total` | Counter | Number of responses bytes received | On receiving an RPC response |
-
-
 ### Additional Metrics
 
 The following are proposed metrics to be added to clients. This list is _not_ stable and is subject to drastic changes, deletions, and additions. The additional metric list is being
