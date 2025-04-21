@@ -48,7 +48,8 @@ The following metrics are proposed to be added to clients for PeerDAS monitoring
 | `beacon_data_column_sidecar_inclusion_proof_verification_{time_units}` | Histogram | Time taken to verify data column sidecar inclusion proof                          |  On data column sidecar inclusion proof verification  |
 | `beacon_kzg_verification_data_column_single_{time_units}`             | Histogram | Runtime of single data column kzg verification                                 | On single data column kzg verification  |
 | `beacon_kzg_verification_data_column_batch_{time_units}`               | Histogram | Runtime of batched data column kzg verification                                 | On batched data column kzg verification |
-| `beacon_custody_columns_count_total`                              | Counter     | Total count of columns in custody within the data availability boundary                                     | On custody collecting and verification |
+| `beacon_custody_groups` | Gauge | Total number of custody groups within a node | On updating custody group count |
+| `beacon_custody_groups_backfilled` | Gauge | Total number of custody groups backfilled by a node | On syncing |
 
 \* Clients are free to choose either `seconds` or `milliseconds` for `{time_units}`.
 For example: `beacon_data_availability_reconstruction_time_seconds` or `beacon_data_availability_reconstruction_time_milliseconds`.
