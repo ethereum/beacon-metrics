@@ -51,7 +51,7 @@ The following metrics are proposed to be added to clients for PeerDAS monitoring
 | `beacon_custody_groups_backfilled` | Gauge | Total number of custody groups backfilled by a node | On syncing |
 | `beacon_engine_getBlobsV2_requests_total` | Counter |  Total number of `engine_getBlobsV2` requests sent | On sending `engine_getBlobsV2` requests | 
 | `beacon_engine_getBlobsV2_responses_total` | Counter | Total number of `engine_getBlobsV2` successful responses received | On receiving `engine_getBlobsV2` responses |
-| `beacon_engine_getBlobsV2_runtime_seconds` | Histogram | Full runtime of `engine_getBlobsV2` requests | On `engine_getBlobsV2` request completion
+| `beacon_engine_getBlobsV2_request_duration_seconds` | Histogram | Duration of `engine_getBlobsV2` requests | On `engine_getBlobsV2` request completion
 
 ### Additional Metrics
 
