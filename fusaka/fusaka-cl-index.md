@@ -16,7 +16,7 @@ This table lists all EIPs scheduled for the Fusaka upgrade. It serves as a table
 
 | EIP | Title | Metrics |
 |-----|-------|---------|
-| [EIP-7594](fusaka/eip-7594-metrics.md) | PeerDAS - Peer Data Availability Sampling | 13 |
+| [EIP-7594](fusaka/eip-7594-cl-metrics.md) | PeerDAS - Peer Data Availability Sampling | 13 |
 | EIP-7823 | Set upper bounds for MODEXP | none |
 | EIP-7825 | Transaction Gas Limit Cap | none |
 | EIP-7883 | ModExp Gas Cost Increase | none |
