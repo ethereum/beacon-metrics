@@ -4,7 +4,7 @@
 
 | Fork Half | EIP | Metrics | Grandine | Lighthouse | Lodestar | Nimbus | Prysm | Teku |
 |-----------|-----|--------- | -------- | ---------- | -------- | ------ | ----- | ---- |
-| [Fulu (CL)](fusaka/fusaka-cl-index.md) | [EIP-7594](https://eips.ethereum.org/EIPS/eip-7594)  | 13  | TBD | TBD | TBD | TBD | TBD | TBD |
+| [Fulu (CL)](fusaka-cl-index.md) | [EIP-7594](https://eips.ethereum.org/EIPS/eip-7594)  | 13  | TBD | TBD | TBD | TBD | TBD | TBD |
 
 ## Metrics, by Metric Type
 
