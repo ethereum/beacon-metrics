@@ -32,10 +32,10 @@
 
 ### Sync
 
-| Metric | Usage | Sample collection event | Grandine | Lighthouse | Lodestar | Nimbus | Prysm | Teku |
-|--------|-------|-------------------------|----------|------------|----------|--------|-------|------|
-| `beacon_custody_groups` | Total number of custody groups within a node | On updating custody group count | □ | □ | ✅ | □ | □ | ✅ |
-| `beacon_custody_groups_backfilled` | Total number of custody groups backfilled by a node | On syncing | □ | □ | □ | □ | □ | ✅ |
+| Metric | Type | Usage | Sample collection event | Grandine | Lighthouse | Lodestar | Nimbus | Prysm | Teku |
+|--------|-------|-------|-------------------------|----------|------------|----------|--------|-------|------|
+| `beacon_custody_groups` | Gauge | Total number of custody groups within a node | On updating custody group count | □ | □ | ✅ | □ | □ | ✅ |
+| `beacon_custody_groups_backfilled` | Gauge | Total number of custody groups backfilled by a node | On syncing | □ | □ | □ | □ | □ | ✅ |
 
 ### Engine API
 
