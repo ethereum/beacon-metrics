@@ -41,7 +41,9 @@ discussed, we are yet to reach consensus. Ideally we would also discuss which of
 | `beacon_previous_validators`                  | Gauge       | Number of `status="pending\|active\|exited\|withdrawable"` validators in previous epoch | On epoch transition |
 | `beacon_current_live_validators`              | Gauge       | Number of active validators that successfully included attestation on chain for current epoch     | On block  |
 | `beacon_previous_live_validators`             | Gauge       | Number of active validators that successfully included attestation on chain for previous epoch    | On block  |
-| `beacon_pending_deposits`                     | Gauge       | Number of pending deposits (`state.eth1_data.deposit_count - state.eth1_deposit_index`)           | On block  |
+| `beacon_pending_deposits`                     | Gauge       | Number of pending deposits in the current state  | On block  |
+| `beacon_pending_partial_withdrawals`    | Gauge       | Number of pending partial withdrawals in the current state  | On block  |
+| `beacon_pending_consolidations`    | Gauge       | Number of pending consolidations in the current state     | On block  |
 | `beacon_processed_deposits_total`             | Gauge       | Number of total deposits included on chain                                                        | On block  |
 | `beacon_pending_exits`                        | Gauge       | Number of pending voluntary exits in local operation pool                                         | On slot   |
 | `beacon_previous_epoch_orphaned_blocks`       | Gauge       | Number of blocks orphaned in the previous epoch                                         | On epoch transition |
