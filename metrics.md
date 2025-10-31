@@ -20,7 +20,7 @@ The following are the minimal metrics agreed to be conformed by the various clie
 
 | Name | Metric type | Usage | Sample collection event |
 |--------------------------------------------|-------------|-------------------------------------------------------------|----------------------|
-| `libp2p_peers               `              | Gauge       | Tracks the total number of libp2p peers                     | On peer add/drop     |
+| `libp2p_peers`                             | Gauge       | Tracks the total number of libp2p peers                     | On peer add/drop     |
 | `beacon_head_slot`                         | Gauge       | Latest slot of the beacon chain                             | On fork choice       |
 | `beacon_finalized_epoch`                   | Gauge       | Current finalized epoch                                     | On epoch transition  |
 | `beacon_current_justified_epoch`           | Gauge       | Current justified epoch                                     | On epoch transition  |
