@@ -52,6 +52,19 @@ The following metrics are proposed to be added to clients for PeerDAS monitoring
 | `beacon_engine_getBlobsV2_requests_total` | Counter |  Total number of `engine_getBlobsV2` requests sent | On sending `engine_getBlobsV2` requests | 
 | `beacon_engine_getBlobsV2_responses_total` | Counter | Total number of `engine_getBlobsV2` successful responses received | On receiving `engine_getBlobsV2` responses |
 | `beacon_engine_getBlobsV2_request_duration_seconds` | Histogram | Duration of `engine_getBlobsV2` requests | On `engine_getBlobsV2` request completion
+| `beacon_engine_getBlobsV3_requests_total`           | Counter     | Total number of `engine_getBlobsV3` requests sent                                      | On sending `engine_getBlobsV3` requests    |
+| `beacon_engine_getBlobsV3_complete_responses_total` | Counter     | Total number of complete `engine_getBlobsV3` successful responses received             | On receiving `engine_getBlobsV3` responses |
+| `beacon_engine_getBlobsV3_partial_responses_total`  | Counter     | Total number of `engine_getBlobsV3` partial responses received                         | On receiving `engine_getBlobsV3` responses |
+| `beacon_engine_getBlobsV3_request_duration_seconds` | Histogram   | Duration of `engine_getBlobsV3` requests                                               | On `engine_getBlobsV3` request completion  |
+
+#### Partial Data Column metrics (aka Cell-Level Dissemination)
+
+| Name                                                | Metric type | Usage                                                                                  | Sample collection event                    |
+| --------------------------------------------------- | ----------- | -------------------------------------------------------------------------------------- | ------------------------------------------ |
+| `beacon_partial_message_useful_cells_total`         | Counter     | Number of useful cells received via a partial message. Labels: `column_index`          | On useful partial message reception        |
+| `beacon_partial_message_cells_received_total`       | Counter     | Number of total cells received via a partial message. Labels: `column_index`           | On partial message reception               |
+| `beacon_useful_full_columns_received_total`         | Counter     | Number of useful full columns (any cell being useful) received. Labels: `column_index` | On useful full column reception            |
+| `beacon_partial_message_column_completions_total`   | Counter     | How often the partial message first completed the column. Labels: `column_index`       | On column completion by partial message    |
 
 ### Additional Metrics
 
@@ -92,6 +105,8 @@ discussed, we are yet to reach consensus. Ideally we would also discuss which of
 | `beacon_sync_state`                           | Gauge       | Beacon sync state, 0 for not syncing, 1 for synced, 2 for syncing                                 | On slot   |
 | `process_cpu_seconds_total`                   | Gauge       | Total CPU time in seconds                                                                         | On slot   |
 | `process_max_fds`                             | Gauge       | Maximum number of file descriptors                                                                | On slot   |
+| `gossipsub_topic_msg_sent_bytes`              | Counter     | Total size of publish messages sent via RPC. Labels: `topic`, `partial`                | On pubsub RPC publish|
+| `gossipsub_mesh_peer_counts`                  | Gauge       | Number of partial-message capable peers in mesh. Labels: `topic`, `supports_partial`   | On mesh peer update  |
     
 
 ### Labels
