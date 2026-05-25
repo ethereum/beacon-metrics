@@ -66,6 +66,15 @@ The following metrics are proposed to be added to clients for PeerDAS monitoring
 | `beacon_useful_full_columns_received_total`         | Counter     | Number of useful full columns (any cell being useful) received. Labels: `column_index` | On useful full column reception            |
 | `beacon_partial_message_column_completions_total`   | Counter     | How often the partial message first completed the column. Labels: `column_index`       | On column completion by partial message    |
 
+#### Fast Confirmation
+
+| Name                          | Metric type | Usage                                                                 | Sample collection event                                 |
+| ----------------------------- | ----------- | --------------------------------------------------------------------- | ------------------------------------------------------- |
+| `beacon_fcr_slot`             | Gauge       | Slot of the most recent confirmed block                               | On after the fast confirmation rule execution           |
+| `beacon_fcr_reorgs_total`     | Counter     | Total number of confirmed block reorganizations                       | On chain reorg making confirmed block non-canonical     |
+| `beacon_fcr_fallbacks_total`  | Counter     | Total number of fallbacks to finality                                 | On reverting confirmed block to the finalized block     |
+| `beacon_fcr_restarts_total`   | Counter     | Total number of restarts from a safe unrealized justified block       | On restarting from the unrealized justified checkpoint  |
+
 ### Additional Metrics
 
 The following are proposed metrics to be added to clients. This list is _not_ stable and is subject to drastic changes, deletions, and additions. The additional metric list is being
