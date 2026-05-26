@@ -68,12 +68,12 @@ The following metrics are proposed to be added to clients for PeerDAS monitoring
 
 #### Fast Confirmation
 
-| Name                          | Metric type | Usage                                                                 | Sample collection event                                 |
-| ----------------------------- | ----------- | --------------------------------------------------------------------- | ------------------------------------------------------- |
-| `beacon_fcr_slot`             | Gauge       | Slot of the most recent confirmed block                               | On after the fast confirmation rule execution           |
-| `beacon_fcr_reorgs_total`     | Counter     | Total number of confirmed block reorganizations                       | On chain reorg making confirmed block non-canonical     |
-| `beacon_fcr_fallbacks_total`  | Counter     | Total number of fallbacks to finality                                 | On reverting confirmed block to the finalized block     |
-| `beacon_fcr_restarts_total`   | Counter     | Total number of restarts from a safe unrealized justified block       | On restarting from the unrealized justified checkpoint  |
+| Name                                        | Metric type | Usage                                                                 | Sample collection event                                 |
+| ------------------------------------------- | ----------- | --------------------------------------------------------------------- | ------------------------------------------------------- |
+| `beacon_fast_confirmation_slot`             | Gauge       | Slot of the most recent confirmed block                               | On after the fast confirmation rule execution           |
+| `beacon_fast_confirmation_reorgs_total`     | Counter     | Total number of confirmed block reorganizations                       | On chain reorg making confirmed block non-canonical     |
+| `beacon_fast_confirmation_fallbacks_total`  | Counter     | Total number of fallbacks to finality                                 | On reverting confirmed block to the finalized block     |
+| `beacon_fast_confirmation_restarts_total`   | Counter     | Total number of restarts from a safe unrealized justified block       | On restarting from the unrealized justified checkpoint  |
 
 ### Additional Metrics
 
