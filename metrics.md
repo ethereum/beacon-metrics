@@ -56,6 +56,10 @@ The following metrics are proposed to be added to clients for PeerDAS monitoring
 | `beacon_engine_getBlobsV3_complete_responses_total` | Counter     | Total number of complete `engine_getBlobsV3` successful responses received             | On receiving `engine_getBlobsV3` responses |
 | `beacon_engine_getBlobsV3_partial_responses_total`  | Counter     | Total number of `engine_getBlobsV3` partial responses received                         | On receiving `engine_getBlobsV3` responses |
 | `beacon_engine_getBlobsV3_request_duration_seconds` | Histogram   | Duration of `engine_getBlobsV3` requests                                               | On `engine_getBlobsV3` request completion  |
+| `beacon_engine_getBlobsV4_requests_total`           | Counter     | Total number of `engine_getBlobsV4` requests sent                                      | On sending `engine_getBlobsV4` requests    |
+| `beacon_engine_getBlobsV4_complete_responses_total` | Counter     | Total number of complete `engine_getBlobsV4` successful responses received             | On receiving `engine_getBlobsV4` responses |
+| `beacon_engine_getBlobsV4_partial_responses_total`  | Counter     | Total number of `engine_getBlobsV4` partial responses received with missing blobs or cells | On receiving `engine_getBlobsV4` responses |
+| `beacon_engine_getBlobsV4_request_duration_seconds` | Histogram   | Duration of `engine_getBlobsV4` requests                                               | On `engine_getBlobsV4` request completion  |
 
 #### Partial Data Column metrics (aka Cell-Level Dissemination)
 
